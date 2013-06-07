@@ -11,7 +11,7 @@ describe "Static pages" do
     end
     it "should have the right titles" do
       visit '/static_pages/home'
-      expect(page).to have_title("#{base_title} | Home")
+      page.should_not have_selector('title', :text => '| Home')
     end
   end
   
